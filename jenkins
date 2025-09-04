@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout Code') {
+            steps {
+                // Replace with your Git repo URL and branch
+                git branch: 'main', url: 'https://github.com/varunsaipabbathi/examplegit.git'
+            }
+        }
+        stage('Publish HTML Report') {
+            steps {
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: '.', // if form.html is in repo root
+                    reportFiles: 'reg.html',
+                    reportName: 'Registration Form'
+                ])
+            }
+        }
+    }
+}
