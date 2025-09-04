@@ -15,7 +15,7 @@ pipeline {
                     keepAll: true,
                     reportDir: '.', // if form.html is in repo root
                     reportFiles: 'reg.html',
-                    reportName: 'Student Registration Form'
+                    reportName: 'Registration Form'
                 ])
             }
         }
