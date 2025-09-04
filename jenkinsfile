@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Replace with your Git repo URL and branch
-                git branch: 'main', url: 'https://github.com/varunsaipabbathi/examplegit.git'
+                git branch: 'main', url: 'https://github.com/varunsaipabbathi/examplegit'
             }
         }
         stage('Publish HTML Report') {
